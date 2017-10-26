@@ -14,4 +14,5 @@ script:
   - vendor/bin/phpunit --process-isolation --coverage-clover=coverage.xml
 
 after_success:
-  - bash <(curl -s https://codecov.io/bash)
+  - php vendor/bin/coveralls -v
+#  - bash <(curl -s https://codecov.io/bash)
